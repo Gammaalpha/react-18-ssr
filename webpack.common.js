@@ -1,3 +1,5 @@
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 const commonConfig = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     module: {
@@ -18,7 +20,10 @@ const commonConfig = {
     },
     resolve: {
         extensions: [".js", ".jsx"]
-    }
+    },
+    plugins: [
+        new CleanWebpackPlugin(), // Only cleans build/server
+    ]
 }
 
 module.exports = {

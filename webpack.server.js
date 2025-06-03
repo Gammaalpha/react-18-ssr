@@ -8,7 +8,7 @@ module.exports = {
     target: 'node',
     output: {
         filename: 'server.bundle.js',
-        path: path.resolve(__dirname, 'build'),
+        path: path.resolve(__dirname, 'build/server'),
     },
     module: {
         rules: [
@@ -22,5 +22,5 @@ module.exports = {
             },
         ]
     },
-    externals: [nodeExternals()]
+    externals: [nodeExternals()],
 }
