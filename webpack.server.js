@@ -16,6 +16,10 @@ module.exports = {
                 test: /\.(js|jsx)$/i,
                 loader: "babel-loader"
             },
+            {
+                test: /\.scss$/,
+                use: 'null-loader', // stub out SCSS on the server
+            },
         ]
     },
     externals: [nodeExternals()]
